@@ -24,7 +24,7 @@ public class TaskServiceImpl implements TaskService {
 	        task.setDescription(requestDTO.getDescription());
 	        task.setCreatedAt(requestDTO.getCreatedAt());
 	        task.setCompleted(requestDTO.isCompleted());
-	        task.setTaskNote("NA");
+	        //task.setTaskNote("NA");
 	        tasks.add(task); // Add task to the list
 
 	        return task;
@@ -69,7 +69,6 @@ public class TaskServiceImpl implements TaskService {
 	    	 for (TaskResponseDTO task : tasks) {
 		            if (task.getId() == id) {
 		            	task.setTaskNote(requestDTO.getTaskNote());
-		            	tasks.add(task);
 		            	return task;
 		            }
 	    	 }
