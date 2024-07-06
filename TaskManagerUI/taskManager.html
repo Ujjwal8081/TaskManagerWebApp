@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TASK MANAGER WEB APP</title>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- DataTables CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.11.3/datatables.min.css"/>
+
+  <!-- Your custom CSS -->
+  <link rel="stylesheet" href="taskStyle.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Task Manager</h1>
+        <table id="myTable" class="display" style="width:100%">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Created At</th>
+                    <th>Completed</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div id="loadingMessage">Loading...</div>
+    </div>
+
+    <!-- DataTables JavaScript -->
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.11.3/datatables.min.js"></script>
+  
+    <!-- Your custom JavaScript file -->
+    <script src="taskManager.js"></script>
+</body>
+</html>

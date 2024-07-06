@@ -1,0 +1,41 @@
+/* Ensure the table fills its container */
+#myTable {
+    width: 100%;
+}
+
+/* Optional: Add padding and margin to the container for spacing */
+.container {
+    margin: 20px;
+    padding: 20px;
+}
+
+/* Optional: Style the loading message */
+#loadingMessage {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Optional: Style the table headers */
+#myTable thead th {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+/* Optional: Style the table rows */
+#myTable tbody td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+/* Optional: Style alternating rows */
+#myTable tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Optional: Hide default DataTables search input styling */
+.dataTables_filter input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+}

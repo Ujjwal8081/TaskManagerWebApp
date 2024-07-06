@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,6 +20,7 @@ import TaskManager.example.TaskManager.DTOs.TaskResponseDTO;
 import TaskManager.example.TaskManager.Service.TaskService;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:8080")
 @RequestMapping("/taskManager")
 public class TaskController {
 	private final TaskService taskService;
@@ -34,7 +36,7 @@ public class TaskController {
 		return new ResponseEntity<>(createdTask, HttpStatus.CREATED);
 	}
 
-	@GetMapping("/{id}")
+	@GetMapping("/getTaskById/{id}")
 	public ResponseEntity<TaskResponseDTO> getTaskById(@PathVariable int id) {
 		TaskResponseDTO task = taskService.getTaskById(id);
 		if (task != null) {
