@@ -7,6 +7,7 @@ public class AddTaskDTO {
     private String description;
     private Date createdAt;
     private boolean completed;
+    private String taskNote;
     
 	public String getTitle() {
 		return title;
@@ -32,6 +33,12 @@ public class AddTaskDTO {
 	public void setCompleted(boolean completed) {
 		this.completed = completed;
 	}
+	public String getTaskNote() {
+		return taskNote;
+	}
+	public void setTaskNote(String taskNote) {
+		this.taskNote = taskNote;
+	}
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
@@ -43,6 +50,8 @@ public class AddTaskDTO {
 		builder.append(createdAt);
 		builder.append(", completed=");
 		builder.append(completed);
+		builder.append(", taskNote=");
+		builder.append(taskNote);
 		builder.append("]");
 		return builder.toString();
 	}

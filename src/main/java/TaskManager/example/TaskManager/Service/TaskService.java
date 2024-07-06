@@ -19,4 +19,5 @@ public interface TaskService {
 	    List<TaskResponseDTO> getAllTasks();
 
 	    void deleteTask(int id);
+	    TaskResponseDTO addTaskNote(int id, AddTaskDTO requestDTO);
 }

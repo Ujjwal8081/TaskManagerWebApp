@@ -67,5 +67,11 @@ public class TaskController {
 		taskService.deleteTask(id);
 		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 	}
+	@PostMapping("/addTaskNote/{id}")
+	public ResponseEntity<TaskResponseDTO> addTaskNote(@PathVariable int id, @RequestBody AddTaskDTO requestDTO){
+		TaskResponseDTO addedNote = taskService.addTaskNote(id, requestDTO);
+		return new ResponseEntity<>(addedNote, HttpStatus.CREATED);
+	}
+	
 
 }

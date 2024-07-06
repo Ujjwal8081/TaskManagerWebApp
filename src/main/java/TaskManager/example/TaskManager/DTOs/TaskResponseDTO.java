@@ -9,6 +9,7 @@ public class TaskResponseDTO {
 	    private String description;
 	    private Date createdAt;
 	    private boolean completed;
+	    private String taskNote;
 		
 		public int getId() {
 			return id;
@@ -39,6 +40,12 @@ public class TaskResponseDTO {
 		}
 		public void setCompleted(boolean completed) {
 			this.completed = completed;
+		}
+		public String getTaskNote() {
+			return taskNote;
+		}
+		public void setTaskNote(String taskNote) {
+			this.taskNote = taskNote;
 		}
 	    
 	
